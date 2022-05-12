@@ -44,7 +44,7 @@ export function Home() {
           Load More
         </Button>
       </div>
-      {!loading && <LinearProgress className="loader"/>}
+      {loading && <LinearProgress className="loader"/>}
     </div>
   );
 }
