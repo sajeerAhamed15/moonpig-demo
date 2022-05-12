@@ -23,16 +23,15 @@ export async function getCardByPage(pageNumber: number) {
 }
 
 export async function getSingleCard(prdNo: string) {
-  // const response = await fetch(
-  //   `https://cors-anywhere.herokuapp.com/https://www.moonpig.com/uk/api/product/product/?mpn=${prdNo}`
-  // ).then((response) => response.json());
+  // return dummyData as SingleCard
+  const response = await fetch(
+    `https://cors-anywhere.herokuapp.com/https://www.moonpig.com/uk/api/product/product/?mpn=${prdNo}`
+  ).then((response) => response.json());
 
-  // return response as SingleCard;
-  return temp as SingleCard
+  return response as SingleCard;
 }
 
-
-const temp = {
+const dummyData = {
   "Name": "GT006",
   "SizeName": "Standard Card",
   "AvailableSizes": [
